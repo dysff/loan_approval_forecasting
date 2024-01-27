@@ -471,3 +471,5 @@ if button:
     st.error("""
              ## Update on your loan application - unfortunately, it wasn't approved this time.
              """)
+    
+print('hui')
