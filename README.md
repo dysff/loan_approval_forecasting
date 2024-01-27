@@ -3,23 +3,12 @@
 <a href="https://github.com/MarketingPipeline/Awesome-Repo-Template/">
 <img height=350 alt="Repo Banner - Awesome Repo Template" src="https://capsule-render.vercel.app/api?type=waving&height=300&color=6FC7E1&text=Loan%20Approval%20Forecasting&fontSize=60&textBg=false&section=header&animation=twinkling&fontColor=FFFFFF&reversal=false"></img></a>
 
-<p align="center">
-  <br>
-  <small> <b><i>Show your support!</i> </b></small>
-  <br>
-   <a href="https://github.com/MarketingPipeline/Awesome-Repo-Template">
-    <img title="Star on GitHub" src="https://img.shields.io/github/stars/MarketingPipeline/Awesome-Repo-Template.svg?style=social&label=Star">
-  </a>
-  <a href="https://github.com/MarketingPipeline/Awesome-Repo-Template/fork">
-    <img title="Fork on GitHub" src="https://img.shields.io/github/forks/MarketingPipeline/Awesome-Repo-Template.svg?style=social&label=Fork">
-  </a>
-</p>
-
-___
 <p align='center'>
   <img src="https://img.shields.io/badge/3.11.0-%2329A4D1?style=flat-square&label=python">
-  <img src="https://img.shields.io/badge/Binary%20classification-%23E2A24F?style=flat-square
-">
+  <img src="https://img.shields.io/badge/Binary%20classification-%23E2A24F?style=flat-square">
+  <a href="https://loanapprovalforecasting-by-dysff-ei9kbuafdtgxyhadfdwuum.streamlit.app">
+  <img src=https://img.shields.io/badge/OPEN%20ON%20STREAMLIT-black?style=flat-square>
+  </a>
 </p>
 
 
