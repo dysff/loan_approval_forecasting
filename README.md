@@ -9,6 +9,9 @@
   <a href="https://loanapprovalforecasting-by-dysff-ei9kbuafdtgxyhadfdwuum.streamlit.app">
   <img src=https://img.shields.io/badge/OPEN%20ON%20STREAMLIT-black?style=flat-square>
   </a>
+  <a href="https://www.kaggle.com/datasets/rikdifos/credit-card-approval-prediction/data">
+  <img src=https://img.shields.io/badge/dataset-blue?style=flat-square>
+  </a>
 </p>
 
 
@@ -325,7 +328,3 @@ participate in this project.
 This project is licensed under the MIT License - see the
 [LICENSE.md](LICENSE) file for
 details.
-
-
-
-
