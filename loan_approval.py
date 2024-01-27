@@ -299,33 +299,10 @@ def PreprocessingPipeline(data, credit_data):
 
 df_prep = PreprocessingPipeline(app_data, credit_history)
 
-#----------------------SELECT THE MODEL----------------------
-
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import GradientBoostingClassifier
-from sklearn.metrics import classification_report, make_scorer, recall_score
-from sklearn.utils.class_weight import compute_sample_weight
-
-df_prep = df_prep.drop('ID', axis=1)
-X = df_prep.drop('CREDIT_STATUS', axis=1)
-y = df_prep['CREDIT_STATUS']
-
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
-
-sample_weights = compute_sample_weight(class_weight='balanced', y=y_train)#reassigning weights to handle imbalance data
-
-gb_classifier = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, random_state=42)
-gb_classifier.fit(X_train, y_train, sample_weight=sample_weights)
-
-# original_values = y_test[500:560]
-# predicted_values = gb_classifier.predict(X_test[500:560])
-# comparison_dataframe = pd.DataFrame(data={'Original Values':original_values, 'Predicted Values':predicted_values})
-# comparison_dataframe['Differences'] = comparison_dataframe['Original Values'] - comparison_dataframe['Predicted Values']
-# print(comparison_dataframe)
-
 #----------------------STREAMLIT----------------------
 
 import streamlit as st
+import joblib 
 
 st.write("""
 # Credit Approval Forecasting
@@ -459,8 +436,10 @@ crutch_df = PreprocessingPipeline(app_data, credit_history)
 crutch_df = crutch_df.loc[crutch_df['ID'] == 0]
 data_to_predict = crutch_df.drop(columns={'ID', 'CREDIT_STATUS'}, axis=1)
 
+model = joblib.load('mlmodel.pkl')
+
 if button:
-  forecast_result = gb_classifier.predict(data_to_predict)
+  forecast_result = model.predict(data_to_predict)
   
   if int(forecast_result) == 0:
     st.success("""
@@ -471,5 +450,3 @@ if button:
     st.error("""
              ## Update on your loan application - unfortunately, it wasn't approved this time.
              """)
-    
-print('hui')
