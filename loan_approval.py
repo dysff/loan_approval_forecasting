@@ -302,7 +302,8 @@ df_prep = PreprocessingPipeline(app_data, credit_history)
 #----------------------STREAMLIT----------------------
 
 import streamlit as st
-import joblib 
+import joblib
+import time
 
 st.write("""
 # Credit Approval Forecasting
@@ -436,9 +437,13 @@ crutch_df = PreprocessingPipeline(app_data, credit_history)
 crutch_df = crutch_df.loc[crutch_df['ID'] == 0]
 data_to_predict = crutch_df.drop(columns={'ID', 'CREDIT_STATUS'}, axis=1)
 
-model = joblib.load('mlmodel.pkl')
+model = joblib.load('gb_clf_model.pkl')
 
 if button:
+  
+  with st.spinner('Wait for it...'):
+    time.sleep(5)
+    
   forecast_result = model.predict(data_to_predict)
   
   if int(forecast_result) == 0:
