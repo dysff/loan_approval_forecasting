@@ -14,8 +14,6 @@
   </a>
 </p>
 
-# IN PROCESS, NOT FINAL RESULT, JUST TEMPLATE
-
 ## Features:
 
 - A configurable workflow action to:  
