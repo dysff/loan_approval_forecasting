@@ -1,11 +1,11 @@
 # LOAN APPROVAL FORECASTING
 
-<img height=350 alt="Repo Banner - Awesome Repo Template" src="https://capsule-render.vercel.app/api?type=waving&height=300&color=6FC7E1&text=Loan%20Approval%20Forecasting&fontSize=60&textBg=false&section=header&animation=twinkling&fontColor=FFFFFF&reversal=false"></img>
+<img height=350 src="https://capsule-render.vercel.app/api?type=waving&height=300&color=6FC7E1&text=Loan%20Approval%20Forecasting&fontSize=60&textBg=false&section=header&animation=twinkling&fontColor=FFFFFF&reversal=false"></img>
 
 <p align='center'>
   <img src="https://img.shields.io/badge/3.11.0-%2329A4D1?style=flat-square&label=python">
   <img src="https://img.shields.io/badge/Binary%20classification-%23E2A24F?style=flat-square">
-  <a href="https://loanapprovalforecasting-by-dysff-ei9kbuafdtgxyhadfdwuum.streamlit.app">
+  <a href="https://loanapprovalforecasting-by-dysff-f4vtebkbckrwqsaenn6iyr.streamlit.app">
   <img src=https://img.shields.io/badge/OPEN%20ON%20STREAMLIT-black?style=flat-square>
   </a>
   <a href="https://www.kaggle.com/datasets/rikdifos/credit-card-approval-prediction/data">
