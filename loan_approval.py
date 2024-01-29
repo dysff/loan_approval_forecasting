@@ -102,8 +102,8 @@ class OutlierHandler(BaseEstimator, TransformerMixin):
     Q1 = data[self.names].quantile(0.25)
     Q3 = data[self.names].quantile(0.75)
     IQR = Q3 - Q1
-    lower_limit = Q1 - 3 * IQR
-    upper_limit = Q3 + 3 * IQR
+    lower_limit = Q1 - 3.3 * IQR
+    upper_limit = Q3 + 3.3 * IQR
 
     outlier_mask = (data[self.names] < lower_limit) | (data[self.names] > upper_limit)#names marked like True
     data[self.names] = data[self.names].where(~outlier_mask, np.nan)#This method replaces values where the condition is False with np.nan
