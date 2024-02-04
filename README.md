@@ -35,6 +35,9 @@ The application uses a trained machine learning model to predict the issuance of
 It is required to identify all unreliable clients. If the prediction is not clear, then it is worth rejecting this client in order to avoid subsequent problems with him. It is for this reason that the best metric for this would be recall.
 </p>
 
+Confusion matrix of GradientBoostingClassifier
+![Confusion_matrix](assets/confusion_matrix.png)
+
 ### Methods
 <p>
     <ul>
@@ -58,6 +61,9 @@ It is required to identify all unreliable clients. If the prediction is not clea
 <b>SMOTE</b> 
 <p>
 As you know, SMOTE is not recommended to be applied to categorical data. It uses KNN to create new samples to solve the problem of data imbalance. Since 90% of dataset is categorical data, using this method will lead to anomalies in the new samples created by SMOTE. Basically, getting numbers other than 1 or 0 in binary columns, getting numeric values in several columns of one hot encoded column at once. All this leads to the fact that a mixture of abnormal and normal data gets into the training data, on which the model is then trained. The model may have good performance when evaluated on training data, but in fact, when predicting on new data(data entered by the user), the model's performance will be many times worse.
+
+<img src='assets/smote_categories_issue.png'>
+
 </p>
 <p>
 To deal with this problem, I used the compute_sample_weight method from the scikit-learn library. With SMOTE method, 0 class: 0.90, 1 class: 0.91, and after weights sampling, 0 class: 0.91, 1 class: 0.80.
@@ -70,7 +76,7 @@ This app is using trained machine learning model to predict loan approval based 
 
 Some characteristics may be missing, for example, you work as a software engineer, but there is no this profession in the occupation type menu, then you should choose the most similar activity to yours.
 
-![Streamlitgif](assets/screen-capture.gif)
+![Streamlitgif](assets/streamlit_la_usage.gif)
 
 ## Getting started
 This step involves cloning the repository from the provided GitHub URL. After cloning, change your working directory to the newly cloned repository with cd loan_approval_forecasting:
